@@ -1,17 +1,20 @@
-console.log("Starting the app;\n");
+console.log("Starting the app.js ;\n");
 
 let fs = require('fs');
 let os = require('os');
+let notes = require('./notes.js');
 
-var user = os.userInfo();
-console.log(user);
+let result = notes.add(5,7);
+console.log(result);
 
-console.log("Hello " + user.username);
+// var user = os.userInfo();
 
-fs.appendFile("greet.txt",`\nHello ${user.username}`,function (err) {
-    if(err){
-        console.log('====================================');
-        console.log("Couldn't append to the file");
-        console.log('====================================');
-    }
-})
+// console.log("Hello " + user.username);
+
+// fs.appendFile("greet.txt",`\nHello ${user.username}`,function (err) {
+//     if(err){
+//         console.log('====================================');
+//         console.log("Couldn't append to the file");
+//         console.log('====================================');
+//     }
+// })
